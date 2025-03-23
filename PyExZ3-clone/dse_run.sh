@@ -8,7 +8,7 @@ fi
 
 # Set variables
 export FILE_NAME="$1"
-export INSTALL_PATH="$HOME/DSE/PyExZ3-clone"
+export INSTALL_PATH="$HOME/DSE/PyExZ3-clone/PyExZ3-clone"
 export ITERATIONS="${2:-5}"  # Default to 1 iteration if not provided
 TIME_LIMIT=30
 
