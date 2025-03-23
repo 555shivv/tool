@@ -237,3 +237,6 @@ tmp.txt
 ## PyCharm
 #############
 .idea
+
+Results/
+.venv
