@@ -15,9 +15,8 @@ This document provides step-by-step instructions to install the Python-based DSE
 
 1. [Introduction](#introduction)
 2. [Tested Versions](#tested-versions)
-3. [Dependency overview](#dependency-overview)
-4. [Prerequisites](#prerequisites)
-5. [Step-by-Step Installation](#step-by-step-installation)
+3. [Prerequisites](#prerequisites)
+4. [Step-by-Step Installation](#step-by-step-installation)
 6. [Usage](#usage)
 7. [Troubleshooting and Resources](#troubleshooting-and-resources)
 8. [License](#license)
@@ -72,7 +71,7 @@ Ensure the following are in place before beginning the installation:
 
 3. **Clone DSE Repository:**
 
-   Clone the ESBMC repository from GitHub to get the latest source code.
+   Clone the DSE repository from GitHub to get the latest source code.
 
    ```bash
    git clone https://github.com/555shiv/tool.git
@@ -100,10 +99,10 @@ Ensure the following are in place before beginning the installation:
 
 
    - 4.4. **Script file to run the tool**
-        - change the mode of script file to run DSE tool
+        - Change the script file permissions to run the DSE tool:
 
             ```bash
-            cd chmod +x dse_run.sh
+             chmod +x dse_run.sh
             ```
 
    
