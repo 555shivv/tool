@@ -1,1 +1,29 @@
+# **Dynamic Symbolic Execution (DSE) Tool**
+
+This project provides a **Dynamic Symbolic Execution (DSE) Tool** for Python programs. It leverages the **Z3 theorem prover** to explore program execution paths and uncover potential edge cases automatically.
+
+## **Table of Contents**
+- [Installation Guide](#installation-guide)
+- [Usage](#usage)
+- [Output and Logs](#output-and-logs)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## **Installation Guide**
+
+### **Prerequisites**
+Ensure the following dependencies are installed on your system before proceeding:
+- **Python** (Recommended: Python 3.8 or later)
+- **Git**
+- **Z3 SMT Solver**
+- **Virtual Environment (`venv`)**
+
+### **Installation Steps**
+
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/555shivv/tool.git
+   cd tool
 
