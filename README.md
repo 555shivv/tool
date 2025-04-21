@@ -1,4 +1,4 @@
-# [Internal Documentation] Python DSE Tool Installation Guide
+# [ Documentation] Python Dynamic Symbolic Execution Tool Installation Guide
 
 <table width="100%">
   <tr>
@@ -142,7 +142,76 @@ If you encounter any issues during the installation, refer to the official docum
 
 - [Official DSE Repository](https://github.com/thomasjball/PyExZ3.git)
 
+---
 
+## Limitations
+|-------------------|----------|----------------------------------------|
+| Program           | status   |   Limitations                          |
+|-------------------|----------|----------------------------------------|
+|Condition Coverage | Yes      | -                                      |
+|-------------------|----------|----------------------------------------|
+|Recursion          | partial  |Handles shallow recursion but deeper    |
+|                   |          |   recursion may cause path explosion   |
+|-------------------|----------|----------------------------------------|
+|File handling      | No       | -                                      |
+|-------------------|----------|----------------------------------------|
+| Exception handling| partial  | Can log exceptions but might not       |
+|                   |          | explore paths exhaustively             |
+|-------------------|----------|----------------------------------------|
+| Dead Code         | pass     | -                                      |
+|-------------------|----------|----------------------------------------|
+|Loops              | partial  | Unrolls loops symbolically but         |
+|                   |          | struggles with finite or complex loops |
+|-------------------|----------|----------------------------------------|
+|Concurrency        | No       | PyExZ3 doesn't support multi           |
+|                   |          |    threaded execution                  |
+|-------------------|----------|----------------------------------------|
+| Floating-point    | No       | SMT solvers dont handle floating-point |
+|-------------------|----------|----------------------------------------|
+| System Calls      | No       | PyExZ3 does not support system calls   |
+|-------------------|----------|----------------------------------------|
+| input handling    | yes      | -                                      |
+|-------------------|----------|----------------------------------------|
+
+
+---
+Sure! Here's the complete Markdown code snippet that you can copy and paste directly into your `README.md` file:
+
+```markdown
+## ⚠ Important Guidelines for Writing Test Programs
+
+To ensure your code works correctly with the **Dynamic Symbolic Execution (DSE) tool**, please follow these requirements:
+
+-  **Include symbolic input variables** in your `main()` function or any defined entry point.
+
+  **Example:**
+  ```python
+  def main(in1):
+      ...
+  ```
+
+-  **Use assertions or violation conditions** in your code so that the DSE tool can explore alternative execution paths and detect bugs.
+
+  **Examples:**
+  ```python
+  assert in1 != 13, "Unlucky number encountered!"
+  ```
+
+  Or:
+  ```python
+  if in1 == 42:
+      raise AssertionError("Universe glitch detected!")
+  ```
+
+-  **Without symbolic variables and assertion/violation logic,** the tool will not be able to explore path conditions effectively or report useful results.
+
+---
+
+>  *Tip:* You can write your own test programs or modify existing ones to follow this structure and enhance symbolic exploration.
+```
 ## License
 
 This documentation is intended solely for guiding users on installing and using the tool. We are not affiliated with the official  repository or its maintainers in any manner. For the official repository and license information, please visit the [DSE GitHub](https://github.com/thomasjball/PyExZ3?tab=readme-ov-file)
+
+
+
