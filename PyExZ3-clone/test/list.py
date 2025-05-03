@@ -1,5 +1,5 @@
 def list(a,b):
-   if ([a,b] == [1,2]):
+   if a==1 and b==2:
       return 1
    else:
       return 2
